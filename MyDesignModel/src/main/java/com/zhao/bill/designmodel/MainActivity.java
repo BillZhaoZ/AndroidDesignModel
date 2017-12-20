@@ -8,13 +8,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.zhao.bill.designmodel.builder.three.picLoadeUtils.cache.DiskCache;
-import com.zhao.bill.designmodel.builder.three.picLoadeUtils.cache.DoubleCache;
 import com.zhao.bill.designmodel.builder.three.picLoadeUtils.ImageListener;
 import com.zhao.bill.designmodel.builder.three.picLoadeUtils.ImageLoaderUtil;
+import com.zhao.bill.designmodel.builder.three.picLoadeUtils.cache.DiskCache;
+import com.zhao.bill.designmodel.builder.three.picLoadeUtils.cache.DoubleCache;
 import com.zhao.bill.designmodel.builder.three.picLoadeUtils.cache.MemoryCache;
-import com.zhao.bill.designmodel.builder.three.picLoadeUtils.config.ImageLoaderConfig;
-import com.zhao.bill.designmodel.builder.three.picLoadeUtils.policy.SerialPolicy;
 import com.zhao.bill.designmodel.builder.three.util.PreferenceUtil;
 
 
@@ -47,14 +45,14 @@ public class MainActivity extends AppCompatActivity implements ImageView.OnClick
         findViewById(R.id.reset).setOnClickListener(this);
 
 
-        // builder模式
+      /*  // builder模式
         ImageLoaderConfig config = new ImageLoaderConfig.Builder()
                 .setLoadingPlaceHolder(R.drawable.ic_launcher_background)
                 .setNotFoundPlaceHolder(R.drawable.ic_launcher_background)
                 .setCache(new DoubleCache())
                 .setLoadingPolicy(new SerialPolicy()).create();
 
-        ImageLoaderUtil.getInstance().init(config);
+        ImageLoaderUtil.getInstance().init(config);*/
 
 
         mUtil = ImageLoaderUtil.getInstance();
