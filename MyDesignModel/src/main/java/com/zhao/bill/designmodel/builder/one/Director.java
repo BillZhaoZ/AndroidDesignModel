@@ -6,7 +6,7 @@ package com.zhao.bill.designmodel.builder.one;
  */
 public class Director {
 
-    Builder mBuilder = null;
+    private Builder mBuilder = null;
 
     public Director(Builder builder) {
         mBuilder = builder;

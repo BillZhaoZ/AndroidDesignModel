@@ -22,10 +22,12 @@ import java.util.concurrent.Executors;
 public class ImageLoaderUtil {
 
     private ImageLoaderConfig mConfig;
-
     private ImageCache mImageCache; // 图片缓存
     private ExecutorService mExecutorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors()); // 线程池，线程数量为CPU的数量
 
+    /**
+     * 单例
+     */
     private static ImageLoaderUtil ImageLoaderUtilInstance;
 
     public static ImageLoaderUtil getInstance() {
@@ -41,6 +43,11 @@ public class ImageLoaderUtil {
         return ImageLoaderUtilInstance;
     }
 
+    /**
+     * 初始化
+     *
+     * @param config
+     */
     public void init(ImageLoaderConfig config) {
         mConfig = config;
         checkConfig();
