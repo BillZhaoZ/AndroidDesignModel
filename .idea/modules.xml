@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DesignModel.iml" filepath="$PROJECT_DIR$/DesignModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DesignModel-AndroidDesignModel.iml" filepath="$PROJECT_DIR$/DesignModel-AndroidDesignModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyDesignModel/MyDesignModel.iml" filepath="$PROJECT_DIR$/MyDesignModel/MyDesignModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyDesignModel/MyDesignModel.iml" filepath="$PROJECT_DIR$/MyDesignModel/MyDesignModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyDesignModel/app.iml" filepath="$PROJECT_DIR$/MyDesignModel/app.iml" />
+    </modules>
+  </component>
+</project>
