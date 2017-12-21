@@ -1,4 +1,4 @@
-package com.zhao.bill.designmodel.model;
+package com.zhao.bill.designmodel.originModel;
 
 import java.util.ArrayList;
 

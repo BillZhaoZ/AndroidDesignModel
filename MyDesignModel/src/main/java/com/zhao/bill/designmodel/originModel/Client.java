@@ -1,14 +1,16 @@
-package com.zhao.bill.designmodel.model;
+package com.zhao.bill.designmodel.originModel;
 
 /**
  * 客户端
+ * 浅拷贝：副文档的字段引用了原始文档的字段；  其中任何一个的修改，都会对另一个产生影响；
+ * <p>
  * Created by Bill on 2017/12/20.
  */
-
 public class Client {
 
     public static void main(String[] args) {
 
+        // 1、浅拷贝
         // 构建对象
         WordDocument originDocument = new WordDocument();
 
@@ -25,6 +27,7 @@ public class Client {
 
         // 修改备份文档  不会影响原始文档
         cloneDocument1.setText("这是修改过的文档2");
+        cloneDocument1.setImages("哈哈.jpg");
         cloneDocument1.showDocu();
 
         originDocument.showDocu();
