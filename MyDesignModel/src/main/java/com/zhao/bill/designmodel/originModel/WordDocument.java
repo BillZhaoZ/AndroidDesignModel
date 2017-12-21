@@ -24,12 +24,18 @@ public class WordDocument implements Cloneable {
 
         try {
             document = (WordDocument) super.clone();
+
+            document.mText = this.mText;
+
+            // 1.浅拷贝
+            // document.mImages = this.mImages;
+
+            // 2.深拷贝  拷贝对象时，对于引用形的字段，也采用拷贝的形式  而不是单纯的引用
+            document.mImages = (ArrayList<String>) this.mImages.clone();
+
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
-
-        document.mText = this.mText;
-        document.mImages = this.mImages;
 
         return document;
     }
