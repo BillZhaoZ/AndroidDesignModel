@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements ImageView.OnClick
         findViewById(R.id.two).setOnClickListener(this);
         findViewById(R.id.reset).setOnClickListener(this);
 
-
       /*  // builder模式
         ImageLoaderConfig config = new ImageLoaderConfig.Builder()
                 .setLoadingPlaceHolder(R.drawable.ic_launcher_background)

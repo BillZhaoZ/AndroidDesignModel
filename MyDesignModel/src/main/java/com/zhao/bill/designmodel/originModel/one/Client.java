@@ -1,4 +1,4 @@
-package com.zhao.bill.designmodel.originModel;
+package com.zhao.bill.designmodel.originModel.one;
 
 /**
  * 客户端
@@ -33,7 +33,10 @@ public class Client {
 
         originDocument.showDocu();*/
 
-        // 2.深拷贝  拷贝对象时，对于引用形的字段，也采用拷贝的形式  而不是单纯的引用
+
+        /**
+         * 2.深拷贝  拷贝对象时，对于引用型的字段，也采用拷贝的形式  而不是单纯的引用
+         */
         WordDocument originDocument = new WordDocument();
 
         originDocument.setText("这是一篇文档");
@@ -53,6 +56,6 @@ public class Client {
         cloneDocument1.showDocu();
 
         originDocument.showDocu();
-
     }
+
 }
