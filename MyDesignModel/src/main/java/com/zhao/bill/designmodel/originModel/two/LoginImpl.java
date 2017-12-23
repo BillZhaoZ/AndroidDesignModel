@@ -4,7 +4,6 @@ package com.zhao.bill.designmodel.originModel.two;
  * 登录实现类
  * Created by Bill on 2017/12/22.
  */
-
 public class LoginImpl implements Login {
 
     @Override
