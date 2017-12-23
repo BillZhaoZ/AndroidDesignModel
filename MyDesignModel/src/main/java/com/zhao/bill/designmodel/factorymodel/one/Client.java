@@ -1,4 +1,4 @@
-package com.zhao.bill.designmodel.factorymodel;
+package com.zhao.bill.designmodel.factorymodel.one;
 
 /**
  * 客户类
@@ -9,7 +9,7 @@ public class Client {
     public static void main(String[] args) {
 
         ConcreateFactory factory = new ConcreateFactory();
-        Product product = factory.createProduct();
+        Product product = factory.createProduct(ConcreteProductB.class);
         product.method();
 
     }

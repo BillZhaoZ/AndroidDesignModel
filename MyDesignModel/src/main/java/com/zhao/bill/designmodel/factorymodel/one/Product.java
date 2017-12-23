@@ -1,4 +1,4 @@
-package com.zhao.bill.designmodel.factorymodel;
+package com.zhao.bill.designmodel.factorymodel.one;
 
 /**
  * 抽象产品类

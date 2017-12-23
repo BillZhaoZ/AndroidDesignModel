@@ -1,4 +1,4 @@
-package com.zhao.bill.designmodel.factorymodel;
+package com.zhao.bill.designmodel.factorymodel.one;
 
 /**
  * 抽象工厂类
@@ -11,5 +11,8 @@ public abstract class Factory {
      *
      * @return
      */
+    public abstract <T extends Product> T createProduct(Class<T> tClass);
+
     public abstract Product createProduct();
+
 }
