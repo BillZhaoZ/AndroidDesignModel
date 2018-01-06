@@ -20,7 +20,7 @@ public class ConcreateFactory extends Factory {
     }
 
     /**
-     * 需要什么对爱那个  传入那个对象的类型即可
+     * 需要什么对象  传入那个对象的类型即可
      *
      * @param tClass
      * @param <T>
