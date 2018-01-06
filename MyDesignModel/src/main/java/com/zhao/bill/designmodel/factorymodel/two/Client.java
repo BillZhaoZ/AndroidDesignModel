@@ -10,6 +10,7 @@ public class Client {
 
         AudiFactory factory = new AudiCarFactory();
 
+        // 生产汽车
         AudiQ3 audiQ3 = factory.createAudioCar(AudiQ3.class);
         audiQ3.drive();
         audiQ3.selefNavigation();

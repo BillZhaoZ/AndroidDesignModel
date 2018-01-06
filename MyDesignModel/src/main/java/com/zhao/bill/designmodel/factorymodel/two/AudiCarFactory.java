@@ -1,6 +1,7 @@
 package com.zhao.bill.designmodel.factorymodel.two;
 
 /**
+ * 汽车生产工厂
  * Created by Bill on 2018/1/6.
  */
 
