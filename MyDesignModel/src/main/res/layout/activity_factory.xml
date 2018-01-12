@@ -13,25 +13,45 @@
         android:paddingBottom="20dp">
 
         <TextView
-            android:id="@+id/tv_builder"
+            android:id="@+id/tv_file"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:background="@color/colorAccent"
             android:gravity="center"
-            android:text="单例、Builder"/>
+            android:text="File"/>
 
         <TextView
-            android:id="@+id/tv_factory"
+            android:id="@+id/tv_xml"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:background="#d4d4d4"
             android:gravity="center"
-            android:text="工厂方法"/>
+            android:text="XML"/>
+
+        <TextView
+            android:id="@+id/tv_db"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="#d4d4d4"
+            android:gravity="center"
+            android:text="DB"/>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="#d4d4d4"
+        android:gravity="center"
+        android:text=""/>
 
 </LinearLayout>
