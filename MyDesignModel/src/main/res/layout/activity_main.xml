@@ -10,64 +10,28 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:background="#d4d4d4"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:paddingBottom="20dp">
 
         <TextView
-            android:id="@+id/disk"
-            android:layout_width="0dp"
+            android:id="@+id/builder"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:background="@color/colorAccent"
             android:gravity="center"
-            android:text="磁盘缓存"/>
+            android:text="单例、Builder"/>
 
         <TextView
-            android:id="@+id/memory"
-            android:layout_width="0dp"
+            android:id="@+id/factory"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="内存缓存"/>
-
-        <TextView
-            android:id="@+id/two"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            android:text="双重缓存"
-            android:textColor="#ffffff"/>
-
-        <TextView
-            android:id="@+id/reset"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="重置缓存类型"/>
+            android:text="工厂方法"/>
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/iv_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/ic_launcher_foreground"/>
-
-    <TextView
-        android:id="@+id/tv_show"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:text="展示方式为：未设置"/>
 
 </LinearLayout>
