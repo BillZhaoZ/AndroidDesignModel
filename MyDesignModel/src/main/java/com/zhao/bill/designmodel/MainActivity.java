@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         x.view().inject(this);
 
+        // 测试引用arr
+      /*  String content = MyTest.getContent();
+        Log.d("haha", content);*/
     }
 
     @Event(value = {R.id.tv_builder, R.id.tv_factory})

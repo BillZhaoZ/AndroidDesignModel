@@ -1,1 +1,1 @@
-include ':MyDesignModel'
+include ':MyDesignModel', ':mylibrary'
