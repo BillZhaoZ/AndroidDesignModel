@@ -4,7 +4,6 @@ package com.zhao.bill.designmodel.abstractfactory;
  * 客户类
  * Created by Bill on 2018/1/12.
  */
-
 public class CarBuilderClient {
 
     public static void main(String[] args) {
