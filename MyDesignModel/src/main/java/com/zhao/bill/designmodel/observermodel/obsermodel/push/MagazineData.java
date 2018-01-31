@@ -1,4 +1,4 @@
-package com.zhao.bill.designmodel.observermodel;
+package com.zhao.bill.designmodel.observermodel.obsermodel.push;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,6 @@ import java.util.List;
  * author：Bill
  * date: 2018/1/31
  */
-
 public class MagazineData implements Observerable {
 
     private List<Observer> mObservers;
@@ -37,6 +36,7 @@ public class MagazineData implements Observerable {
     @Override
     public void removeObserver(Observer o) {
         int i = mObservers.indexOf(o);
+
         if (i >= 0) {
             mObservers.remove(i);
         }

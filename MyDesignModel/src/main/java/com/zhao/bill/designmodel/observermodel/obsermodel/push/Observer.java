@@ -1,4 +1,4 @@
-package com.zhao.bill.designmodel.observermodel;
+package com.zhao.bill.designmodel.observermodel.obsermodel.push;
 
 /**
  * desc: 观测者 抽象接口
