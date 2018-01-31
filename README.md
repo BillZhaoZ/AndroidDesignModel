@@ -606,3 +606,150 @@
             q7Factory.createTire().tire();
         }
     }
+
+六、观察者模式
+    
+    1、编写观察者和被观测者抽象接口
+        
+        /**
+         * desc: 观测者 抽象接口
+         * author：Bill
+         * date: 2018/1/31
+         */
+        public interface Observer {
+        
+            void update(int edition, float cost);
+        }
+               
+        /**
+         * desc:被观察者 抽象接口
+         * author：Bill
+         * date: 2018/1/31
+         */
+        
+        public interface Observerable {
+        
+            // 注册
+            void registerObserver(Observer o);
+        
+            // 解绑
+            void removeObserver(Observer o);
+        
+            // 通知观测者
+            void notifyObservers();
+        }
+        
+    2、实现被观察者接口
+        /**
+         * desc: 被观测者
+         * author：Bill
+         * date: 2018/1/31
+         */
+        
+        public class MagazineData implements Observerable {
+        
+            private List<Observer> mObservers;
+            private int edition;
+            private float cost;
+        
+            public MagazineData() {
+                mObservers = new ArrayList<>();
+            }
+        
+            /**
+             * 注册观察者
+             *
+             * @param o
+             */
+            @Override
+            public void registerObserver(Observer o) {
+                mObservers.add(o);
+            }
+        
+            /**
+             * 移除观察者
+             *
+             * @param o
+             */
+            @Override
+            public void removeObserver(Observer o) {
+                int i = mObservers.indexOf(o);
+                if (i >= 0) {
+                    mObservers.remove(i);
+                }
+            }
+        
+            /**
+             * 通知观察者
+             */
+            @Override
+            public void notifyObservers() {
+        
+                // 遍历观察者 发送通知
+                for (int i = 0; i < mObservers.size(); i++) {
+                    Observer observer = mObservers.get(i);
+                    observer.update(edition, cost);
+                }
+            }
+        
+            public void setInformation(int edition, float cost) {
+                this.edition = edition;
+                this.cost = cost;
+        
+                //信息更新完毕，通知所有观察者
+                notifyObservers();
+            }
+        
+        }
+    
+    3、实现观察者接口
+        /**
+         * desc: 具体的观察者  实现观察者抽象接口Observer
+         * author：Bill
+         * date: 2018/1/31
+         */
+        
+        public class Customer implements Observer {
+        
+            private String name;
+            private int edition;
+            private float cost;
+        
+            Customer(String name) {
+                this.name = name;
+            }
+        
+            @Override
+            public void update(int edition, float cost) {
+        
+                this.edition = edition;
+                this.cost = cost;
+                buy();
+            }
+        
+            private void buy() {
+                System.out.println(name + "购买了第" + edition + "期的杂志，花费了" + cost + "元。");
+            }
+        }
+    
+    4、编写测试类
+        public class Test {
+        
+            public static void main(String[] args) {
+                //创建被观察者
+                MagazineData magazine = new MagazineData();
+                //创建三个不同的观察者
+                Observer customerA = new Customer("A");
+                Observer customerB = new Customer("B");
+                Observer customerC = new Customer("C");
+                
+                //将观察者注册到被观察者中
+                magazine.registerObserver(customerA);
+                magazine.registerObserver(customerB);
+                magazine.registerObserver(customerC);
+                
+                //更新被观察者中的数据，当数据更新后，会自动通知所有已注册的观察者
+                magazine.setInfomation(5, 12);
+            }
+        
+        }
